@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Game">
+
+    <TextView
+        android:id="@+id/question_text"
+        android:layout_width="339dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:text=" Чему равно"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/problem_number"
+        android:layout_width="339dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:text="problem"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_text" />
+
+    <EditText
+        android:id="@+id/answer_input_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer_text" />
+
+    <TextView
+        android:id="@+id/answer_text"
+        android:layout_width="221dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="172dp"
+        android:text="Мой Ответ:"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/answer_input_number"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/answer_input_number"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/answer_button"
+        android:layout_width="312dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="64dp"
+        android:text="Ответить"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/answer_input_number"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="@+id/answer_input_number"
+        app:layout_constraintTop_toBottomOf="@+id/answer_input_number" />
+
+    <TextView
+        android:id="@+id/correctry_guessed_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Правильно решённых подряд"
+        android:textAlignment="center"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer_button"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <TextView
+        android:id="@+id/current_highscore_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/correctry_guessed_text"
+        app:layout_constraintEnd_toEndOf="@+id/correctry_guessed_text"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/correctry_guessed_text" />
+
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="214dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="56dp"
+        android:text="Выйти"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/real_answer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Правильный ответ:"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer_input_number" />
+
+    <TextView
+        android:id="@+id/real_answer_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="123"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/real_answer_text"
+        app:layout_constraintStart_toEndOf="@+id/real_answer_text"
+        app:layout_constraintTop_toTopOf="@+id/real_answer_text"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
